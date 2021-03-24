@@ -31,6 +31,11 @@ public class GithubAPIUtil {
                 .concat(QUESTION_MARK)
                 .concat(LIMIT_RESULT_TO_HUNDRED);
     }
+
+    public String getUserInfo(String userName){
+        return BASE_URL.concat(USERS)
+                .concat(concatURIParam(userName));
+    }
     private String concatURIParam(String param){
         return  '/' + param ;
     }
