@@ -17,7 +17,7 @@ public class GitCommitController {
 
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping(value = "/commits/{committerName}/{repositoryName}")
-    public List<Commit> getRepositoryList(@PathVariable("committerName") String committerName,
+    public List<Commit> getCommitList(@PathVariable("committerName") String committerName,
                                           @PathVariable("repositoryName") String repositoryName){
         return gitCommitService.getCommits(committerName, repositoryName);
     }

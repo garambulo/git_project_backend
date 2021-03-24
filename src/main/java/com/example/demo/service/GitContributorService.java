@@ -18,8 +18,8 @@ public class GitContributorService {
     }
     public List<Contributor> getContributorList(String author, String repositoryName){
         RestTemplate restTemplate = new RestTemplate();
-        String searchURI = githubAPIUtil.getOneHundredContributors(author, repositoryName);
-        List<Contributor> contributorList = restTemplate.getForObject(searchURI, List.class);
+        String getContributorsURI = githubAPIUtil.getOneHundredContributors(author, repositoryName);
+        List<Contributor> contributorList = restTemplate.getForObject(getContributorsURI, List.class);
         return contributorList;
     }
 }

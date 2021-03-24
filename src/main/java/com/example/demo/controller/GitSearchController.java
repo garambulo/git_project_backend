@@ -12,11 +12,11 @@ import org.springframework.web.bind.annotation.RestController;
 public class GitSearchController {
 
     @Autowired
-    GitSearchService gitRepositoryService;
+    GitSearchService gitSearchService;
 
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping(value = "/search/{repositoryName}")
-    public Search getRepositoryList(@PathVariable("repositoryName") String repositoryName){
-        return gitRepositoryService.getSearchedItem(repositoryName);
+    public Search getSearchResult(@PathVariable("repositoryName") String repositoryName){
+        return gitSearchService.getSearchedItem(repositoryName);
     }
 }
