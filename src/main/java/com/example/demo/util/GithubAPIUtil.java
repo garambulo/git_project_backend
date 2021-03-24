@@ -22,6 +22,15 @@ public class GithubAPIUtil {
                 .concat(QUESTION_MARK)
                 .concat(LIMIT_RESULT_TO_HUNDRED);
     }
+
+    public String getOneHundredContributors(String author, String repositoryName){
+        return BASE_URL.concat(REPOS)
+                .concat(concatURIParam(author))
+                .concat(concatURIParam(repositoryName))
+                .concat(CONTRIBUTORS)
+                .concat(QUESTION_MARK)
+                .concat(LIMIT_RESULT_TO_HUNDRED);
+    }
     private String concatURIParam(String param){
         return  '/' + param ;
     }
