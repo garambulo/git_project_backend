@@ -7,11 +7,11 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 @Service
-public class GitRepositoryService {
+public class GitSearchService {
     private GithubAPIUtil githubAPIUtil;
 
     @Autowired
-    public GitRepositoryService(){
+    public GitSearchService(){
         githubAPIUtil = new GithubAPIUtil();
     }
 
